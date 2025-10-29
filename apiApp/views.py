@@ -20,7 +20,7 @@ def product_detail(request, slug):
 
 @api_view(['GET'])
 def category_list(request):
-   category = Category.objects.all()
+   categories = Category.objects.all()
    serializer = CategoryListSerializers(categories, many=True) 
    return Response(serializer.data)
 
